@@ -15,3 +15,15 @@ celery -A project worker -l info
 Задание по парсингу данных с сайта http://jsonplaceholder.typicode.com/users реализовано, но не подключено: 
 доступ к ресурсу заблокирован и возможен только через VPN. Протестировать не удалось.
 
+
+Сборка и запуск:
+
+git clone https://github.com/cepjant/fogstream.git
+cd fogstream
+pip install virtualenv
+python3.7 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+celery -A project worker -l info
