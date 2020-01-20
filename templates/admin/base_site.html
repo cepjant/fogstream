@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django ') }} {{ m_messages }}</a>
+    </h1>
+{% endblock %}
+
+{% block welcome-msg %}
+Всего сообщений: {{ messages_c }}, не отправлено: {{ messages_u }}
+ || Welcome,
+                <strong>{% firstof user.get_short_name user.get_username %}</strong>.</a></h1>
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
