@@ -16,7 +16,7 @@ celery -A project worker -l info
 
 В файле project/settings.py необходимо указать свои параметры SMTP сервера, иначе вернет SMTP authentication error.
 
-Задание по парсингу данных с сайта http://jsonplaceholder.typicode.com/users реализовано, но не подключено: 
+Парсинг данных с сайта http://jsonplaceholder.typicode.com/users реализован, но не подключен: 
 доступ к ресурсу заблокирован и возможен только через VPN. Протестировать не удалось.
 
 ____
